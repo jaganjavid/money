@@ -1,6 +1,6 @@
 import { Card,PasswordInput,Stack,TextInput,Button } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import { addDoc, collection, getDocs, query, where } from 'firebase/firestore';
 import { fireDb } from '../FirebaseConfig';
 import CryptoJS from 'crypto-js';
@@ -19,6 +19,8 @@ const Register = () => {
   });
 
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   const onSubmit = async(e) => {
     
@@ -69,7 +71,8 @@ const Register = () => {
         }
       }
       dispatch(HideLoading())
-      // Before Entrypt
+      navigate("/login");
+      // Before Encrypted
       // const response = await addDoc(collection(fireDb, "users"), registerForm.values);
     } catch(error){
       dispatch(HideLoading())
