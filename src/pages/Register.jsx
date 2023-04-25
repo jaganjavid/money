@@ -123,7 +123,7 @@ const Register = () => {
 
                 <Button fullWidth type='submit' mb={20}>Submit</Button>
 
-                <Link to="/login" style={{color:"grey", textDecoration:"none"}}>Already have an account Login</Link>
+                <Link to="/login" style={{color:"grey", textDecoration:"none"}}>Already have an account? Login</Link>
             </form>
         </Card>
     </div>
