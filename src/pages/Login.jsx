@@ -118,7 +118,7 @@ const Login = () => {
 
                 <Button fullWidth type='submit' mb={20}>Submit</Button>
 
-                <Link to="/register" style={{color:"grey", textDecoration:"none"}}>Don't have an account? Login</Link>
+                <Link to="/register" style={{color:"grey", textDecoration:"none"}}>Don't have an account? Register</Link>
             </form>
         </Card>
     </div>
